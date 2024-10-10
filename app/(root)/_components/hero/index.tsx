@@ -3,7 +3,7 @@ import SectionNewsletter from "./sections/section-informativa";
 import SectionNumbers from "./sections/section-numero";
 
 const Hero = () => {
-    return <section id="hero" className="container mx-auto flex items-center justify-between   w-full">
+    return <section id="hero" className="container mx-auto flex items-center justify-between   w-full gap-10">
         <section className="flex-1">
         <SectionNewsletter/> 
         </section>

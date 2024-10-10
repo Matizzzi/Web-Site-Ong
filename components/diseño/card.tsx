@@ -8,7 +8,7 @@ interface CartaUsuarioProps {
 
 const CartaUsuario = ({ className, children }: CartaUsuarioProps) => {
   return (
-    <div className={cn("bg-white p-4 rounded-2xl shadow-2xl flex flex-col items-center justify-center gap-5" , className)}>
+    <div className={cn("bg-white px-4  py-8 rounded-2xl shadow-2xl flex flex-col items-center justify-center gap-5" , className)}>
       {children}
     </div>
   );
