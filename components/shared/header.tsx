@@ -1,6 +1,7 @@
 import Logo from "@/components/shared/logo";
 import Menu from "@/components/shared/menu";
 import Image from "next/image";
+import Link from "next/link"; // Importa Link
 import { FaRegBell } from "react-icons/fa";
 
 const Header = () => {
@@ -17,7 +18,7 @@ const Header = () => {
           <Menu />
         </nav>
 
-        {/* Notification and Profile Section */}
+        {/* Notification, Profile and Login Section */}
         <section aria-label="User actions">
           <ul className="flex items-center gap-6">
             {/* Notification Bell */}
@@ -47,6 +48,15 @@ const Header = () => {
                   aria-label="User profile"
                 />
               </div>
+            </li>
+
+            {/* Login Button */}
+            <li>
+              <Link href="/auth">
+                <button className="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition">
+                  Iniciar Sesión
+                </button>
+              </Link>
             </li>
           </ul>
         </section>
