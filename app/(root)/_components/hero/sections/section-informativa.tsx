@@ -1,6 +1,7 @@
 import CartaUsuario from "@/components/diseño/card";
 import Image from "next/image";
 import { LuPlus } from "react-icons/lu";
+import Link from "next/link";
 
 const SectionNewsletter = () => {
   return (
@@ -38,13 +39,15 @@ const SectionNewsletter = () => {
           Clientes Premium
         </h5>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {/* Add New User Card */}
-          <CartaUsuario className="flex flex-col items-center justify-center bg-gray-800 text-white py-8 px-6 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300">
-            <span className="relative mb-4 before:absolute before:w-10 before:h-10 before:bg-white flex items-center justify-center before:rotate-45 before:rounded-lg before:shadow-lg">
-              <LuPlus className="text-gray-800 relative z-10" size={24} />
-            </span>
-            <h5 className="text-center text-lg">Agregar nuevo usuario</h5>
-          </CartaUsuario>
+          {/* Add New User Card as a Button */}
+          <Link href="/premium" passHref>
+            <CartaUsuario className="flex flex-col items-center justify-center bg-gray-800 text-white py-8 px-6 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 cursor-pointer">
+              <span className="relative mb-4 before:absolute before:w-10 before:h-10 before:bg-white flex items-center justify-center before:rotate-45 before:rounded-lg before:shadow-lg">
+                <LuPlus className="text-gray-800 relative z-10" size={24} />
+              </span>
+              <h5 className="text-center text-lg">Agregar nuevo usuario</h5>
+            </CartaUsuario>
+          </Link>
 
           {/* User Cards */}
           <CartaUsuario className="flex flex-col items-center bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">

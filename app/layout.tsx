@@ -4,7 +4,7 @@ import { ReactNode } from "react";
 import { Inter } from 'next/font/google';
 import Header from "@/components/shared/header";
 import { cn } from "@/libs/util";
-
+import { Toaster } from 'react-hot-toast'; // Importa Toaster
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -21,14 +21,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={cn("bg-gray-100", inter.className)}>
-        <Header /> {/* Aquí se a grega el componente Header */}
+        <Header /> {/* Aquí se agrega el componente Header */}
         <main className="h-full flex items-center justify-center">
           {children}
         </main>
+        <Toaster /> {/* Aquí se agrega el componente Toaster */}
       </body>
     </html>
   );
 }
-
-// Asegúrate de que este Header no esté en conflicto con el anterior
-
